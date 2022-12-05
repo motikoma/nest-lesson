@@ -1,4 +1,4 @@
-import { ValueObject } from '../ValueObject';
+import { ValueObject } from '../shared/ValueObject';
 
 interface UserNameProps {
   firstName: string;
