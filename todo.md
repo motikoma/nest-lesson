@@ -1,20 +1,22 @@
-# VOを洗い出す作業
+# VO を洗い出す作業
 
-- Userエンティティ
+- User エンティティ
+
   - [-] UserID
-  - [-] Name
- 
-- Productエンティティ
+  - [-] UserName
+
+- Product エンティティ
   - [-] ProductID
-        xxxx-xxxx-xxxx-xxxx
-        UUID
-  - [-] price
-        負の値を取らない
-        上限1千万円
+    xxxx-xxxx-xxxx-xxxx
+    UUID
   - [-] Name
-        1文字以上、100文字以下
+    1 文字以上、100 文字以下
+  - [-] price
+    負の値を取らない
+    上限 1 千万円
 
 NEXT TODO
-- [ ] Productの生成
-- [ ] Productの保存
-- [ ] Productの更新
+
+- [ ] Product の生成
+- [ ] Product の保存
+- [ ] Product の更新

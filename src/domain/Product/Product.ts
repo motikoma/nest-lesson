@@ -1,17 +1,28 @@
 import { Entity } from '../shared/Entity';
 import { ProductId } from './ProductId';
 import { ProductName } from './ProductName';
+import { Yen } from './Yen';
 
-interface ProductProps {
-  id: ProductId;
-  name: ProductName;
-}
+export class Product {
+  private readonly _productId: ProductId;
+  private readonly _productName: ProductName;
+  private readonly _yen: Yen;
 
-export class Product extends Entity<ProductProps> {
-  static create(props: { name: ProductName }): Product {
-    return new Product({
-      id: ProductId.create(),
-      name: new ProductName(),
-    });
+  constructor(productId: ProductId, productName: ProductName, yen: Yen) {
+    this._productId = productId;
+    this._productName = productName;
+    this._yen = yen;
+  }
+
+  get productId() {
+    return this._productId;
+  }
+
+  get productName() {
+    return this._productName;
+  }
+
+  get yen() {
+    return this._yen;
   }
 }
