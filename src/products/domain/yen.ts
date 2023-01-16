@@ -1,4 +1,4 @@
-import { ValueObject } from '../shared/ValueObject';
+import { ValueObject } from '../../domain/shared/ValueObject';
 
 interface YenProps {
   amount: number;
@@ -16,6 +16,11 @@ export class Yen extends ValueObject<YenProps> {
     }
     return new Yen({ amount });
   }
+
+  static reconstruct(amount: number): Yen {
+    return new Yen({ amount });
+  }
+
   get yen(): number {
     return this._value.amount;
   }

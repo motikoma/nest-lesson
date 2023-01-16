@@ -1,4 +1,4 @@
-import { ValueObject } from '../shared/ValueObject';
+import { ValueObject } from '../../domain/shared/ValueObject';
 
 interface ProductNameProps {
   productName: string;
@@ -19,6 +19,10 @@ export class ProductName extends ValueObject<ProductNameProps> {
     if (productName.length > this.maxLength) {
       throw new Error('商品名は100文字以下を指定してください');
     }
+    return new ProductName({ productName });
+  }
+
+  static reconstruct(productName: string): ProductName {
     return new ProductName({ productName });
   }
 

@@ -1,7 +1,6 @@
-import { Entity } from '../shared/Entity';
-import { ProductId } from './ProductId';
-import { ProductName } from './ProductName';
-import { Yen } from './Yen';
+import { ProductId } from './product-id';
+import { ProductName } from './product-name';
+import { Yen } from './yen';
 
 export class Product {
   private readonly _productId: ProductId;
